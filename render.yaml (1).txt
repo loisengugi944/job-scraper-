@@ -1,0 +1,7 @@
+services:
+  - type: cron
+    name: job-scraper
+    schedule: "*/30 * * * *"
+    env: python
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "python scraper.py"
